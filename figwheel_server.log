@@ -1,0 +1,368 @@
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[31mFailed to compile build :app from ["src/cljs" "src/cljc" "env/dev/cljs"] in 0.316 seconds.[0m
+[36m----  Could not Analyze  src/cljs/content_hub/core.cljs  ----[0m
+
+  [1mNo such namespace: content-hub.reddit, could not locate content_hub/reddit.cljs, content_hub/reddit.cljc, or JavaScript source providing "content-hub.reddit" (Please check that namespaces with dashes use underscores in the ClojureScript file name) [0m
+
+[36m----  Analysis Error : Please see src/cljs/content_hub/core.cljs  ----[0m
+WARNING: test already refers to: #'clojure.core/test in namespace: content-hub.reddit, being replaced by: #'content-hub.reddit/test
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[31mFailed to compile build :app from ["src/cljs" "src/cljc" "env/dev/cljs"] in 0.325 seconds.[0m
+[36m----  Could not Analyze  src/cljc/content_hub/util.cljc  ----[0m
+
+  [1mNo such namespace: clj-http.client, could not locate clj_http/client.cljs, clj_http/client.cljc, or JavaScript source providing "clj-http.client" (Please check that namespaces with dashes use underscores in the ClojureScript file name) [0m
+
+[36m----  Analysis Error : Please see src/cljc/content_hub/util.cljc  ----[0m
+WARNING: test already refers to: #'clojure.core/test in namespace: content-hub.reddit, being replaced by: #'content-hub.reddit/test
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[31mFailed to compile build :app from ["src/cljs" "src/cljc" "env/dev/cljs"] in 0.293 seconds.[0m
+[36m----  Could not Analyze  src/cljc/content_hub/reddit.cljc  ----[0m
+
+  [1mNo such namespace: clj-http.client, could not locate clj_http/client.cljs, clj_http/client.cljc, or JavaScript source providing "clj-http.client" (Please check that namespaces with dashes use underscores in the ClojureScript file name) [0m
+
+[36m----  Analysis Error : Please see src/cljc/content_hub/reddit.cljc  ----[0m
+[36m----  Couldn't load Clojure file  src/cljc/content_hub/reddit.cljc   line:1  column:1  ----[0m
+
+  [1mCould not locate content_hub/reddit_server__init.class or content_hub/reddit_server.clj on classpath. Please check that namespaces with dashes use underscores in the Clojure file name.[0m
+
+  [33m1[0m  [1m(ns content-hub.reddit[0m
+  [0m [0m  [33m^--- Could not locate content_hub/reddit_server__init.class or content_hub/reddit_server.clj on classpath. Please check that namespaces with dashes use underscores in the Clojure file name.[0m
+  [36m2[0m  [36m  (:require [content-hub.reddit_server]))[0m
+  [36m3[0m  [36m[0m
+  [36m4[0m  [36m;; (defn test [][0m
+
+[36m----  Exception Stack Trace  ----[0m
+
+java.io.FileNotFoundException: Could not locate content_hub/reddit_server__init.class or content_hub/reddit_server.clj on classpath. Please check that namespaces with dashes use underscores in the Clojure file name.
+ at clojure.lang.RT.load (RT.java:463)
+    clojure.lang.RT.load (RT.java:426)
+    clojure.core$load$fn__6548.invoke (core.clj:6046)
+    clojure.core$load.invokeStatic (core.clj:6045)
+    clojure.core$load.doInvoke (core.clj:6029)
+    clojure.lang.RestFn.invoke (RestFn.java:408)
+    clojure.core$load_one.invokeStatic (core.clj:5848)
+    clojure.core$load_one.invoke (core.clj:5843)
+    clojure.core$load_lib$fn__6493.invoke (core.clj:5888)
+    clojure.core$load_lib.invokeStatic (core.clj:5887)
+    clojure.core$load_lib.doInvoke (core.clj:5868)
+    clojure.lang.RestFn.applyTo (RestFn.java:142)
+    clojure.core$apply.invokeStatic (core.clj:659)
+    clojure.core$load_libs.invokeStatic (core.clj:5925)
+    clojure.core$load_libs.doInvoke (core.clj:5909)
+    clojure.lang.RestFn.applyTo (RestFn.java:137)
+    clojure.core$apply.invokeStatic (core.clj:659)
+    clojure.core$require.invokeStatic (core.clj:5947)
+    clojure.core$require.doInvoke (core.clj:5947)
+    clojure.lang.RestFn.invoke (RestFn.java:408)
+    content_hub.reddit$eval32977$loading__6434__auto____32978.invoke (reddit.cljc:1)
+    content_hub.reddit$eval32977.invokeStatic (reddit.cljc:1)
+    content_hub.reddit$eval32977.invoke (reddit.cljc:1)
+    clojure.lang.Compiler.eval (Compiler.java:7062)
+    clojure.lang.Compiler.eval (Compiler.java:7051)
+    clojure.lang.Compiler.load (Compiler.java:7514)
+    clojure.lang.Compiler.loadFile (Compiler.java:7452)
+    clojure.lang.RT$3.invoke (RT.java:325)
+    figwheel_sidecar.build_middleware.clj_reloading$handle_clj_source_reloading.invokeStatic (clj_reloading.clj:61)
+    figwheel_sidecar.build_middleware.clj_reloading$handle_clj_source_reloading.invoke (clj_reloading.clj:46)
+    figwheel_sidecar.build_middleware.clj_reloading$hook$fn__21100.invoke (clj_reloading.clj:93)
+    figwheel_sidecar.build_middleware.javascript_reloading$hook$fn__21133.invoke (javascript_reloading.clj:48)
+    figwheel_sidecar.components.cljs_autobuild$color_output$fn__21188.invoke (cljs_autobuild.clj:80)
+    figwheel_sidecar.components.cljs_autobuild$execute_build$fn__21230.invoke (cljs_autobuild.clj:234)
+    figwheel_sidecar.utils$sync_exec$fn__237$fn__238.invoke (utils.clj:13)
+    figwheel_sidecar.utils$sync_exec$fn__237.invoke (utils.clj:12)
+    clojure.core$binding_conveyor_fn$fn__5476.invoke (core.clj:2025)
+    clojure.lang.AFn.applyToHelper (AFn.java:154)
+    clojure.lang.RestFn.applyTo (RestFn.java:132)
+    clojure.lang.Agent$Action.doRun (Agent.java:114)
+    clojure.lang.Agent$Action.run (Agent.java:163)
+    java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1149)
+    java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:624)
+    java.lang.Thread.run (Thread.java:748)
+
+[36m----  Couldn't load Clojure file  src/cljc/content_hub/reddit.cljc   line:1  column:1  ----[0m
+
+  [1mCould not locate content_hub/reddit_server__init.class or content_hub/reddit_server.clj on classpath. Please check that namespaces with dashes use underscores in the Clojure file name.[0m
+
+  [33m1[0m  [1m(ns content-hub.reddit[0m
+  [0m [0m  [33m^--- Could not locate content_hub/reddit_server__init.class or content_hub/reddit_server.clj on classpath. Please check that namespaces with dashes use underscores in the Clojure file name.[0m
+  [36m2[0m  [36m  (:require [content-hub.reddit_server :as reddit]))[0m
+  [36m3[0m  [36m[0m
+  [36m4[0m  [36m(defn test [][0m
+
+[36m----  Exception Stack Trace  ----[0m
+
+java.io.FileNotFoundException: Could not locate content_hub/reddit_server__init.class or content_hub/reddit_server.clj on classpath. Please check that namespaces with dashes use underscores in the Clojure file name.
+ at clojure.lang.RT.load (RT.java:463)
+    clojure.lang.RT.load (RT.java:426)
+    clojure.core$load$fn__6548.invoke (core.clj:6046)
+    clojure.core$load.invokeStatic (core.clj:6045)
+    clojure.core$load.doInvoke (core.clj:6029)
+    clojure.lang.RestFn.invoke (RestFn.java:408)
+    clojure.core$load_one.invokeStatic (core.clj:5848)
+    clojure.core$load_one.invoke (core.clj:5843)
+    clojure.core$load_lib$fn__6493.invoke (core.clj:5888)
+    clojure.core$load_lib.invokeStatic (core.clj:5887)
+    clojure.core$load_lib.doInvoke (core.clj:5868)
+    clojure.lang.RestFn.applyTo (RestFn.java:142)
+    clojure.core$apply.invokeStatic (core.clj:659)
+    clojure.core$load_libs.invokeStatic (core.clj:5925)
+    clojure.core$load_libs.doInvoke (core.clj:5909)
+    clojure.lang.RestFn.applyTo (RestFn.java:137)
+    clojure.core$apply.invokeStatic (core.clj:659)
+    clojure.core$require.invokeStatic (core.clj:5947)
+    clojure.core$require.doInvoke (core.clj:5947)
+    clojure.lang.RestFn.invoke (RestFn.java:408)
+    content_hub.reddit$eval32983$loading__6434__auto____32984.invoke (reddit.cljc:1)
+    content_hub.reddit$eval32983.invokeStatic (reddit.cljc:1)
+    content_hub.reddit$eval32983.invoke (reddit.cljc:1)
+    clojure.lang.Compiler.eval (Compiler.java:7062)
+    clojure.lang.Compiler.eval (Compiler.java:7051)
+    clojure.lang.Compiler.load (Compiler.java:7514)
+    clojure.lang.Compiler.loadFile (Compiler.java:7452)
+    clojure.lang.RT$3.invoke (RT.java:325)
+    figwheel_sidecar.build_middleware.clj_reloading$handle_clj_source_reloading.invokeStatic (clj_reloading.clj:61)
+    figwheel_sidecar.build_middleware.clj_reloading$handle_clj_source_reloading.invoke (clj_reloading.clj:46)
+    figwheel_sidecar.build_middleware.clj_reloading$hook$fn__21100.invoke (clj_reloading.clj:93)
+    figwheel_sidecar.build_middleware.javascript_reloading$hook$fn__21133.invoke (javascript_reloading.clj:48)
+    figwheel_sidecar.components.cljs_autobuild$color_output$fn__21188.invoke (cljs_autobuild.clj:80)
+    figwheel_sidecar.components.cljs_autobuild$execute_build$fn__21230.invoke (cljs_autobuild.clj:234)
+    figwheel_sidecar.utils$sync_exec$fn__237$fn__238.invoke (utils.clj:13)
+    figwheel_sidecar.utils$sync_exec$fn__237.invoke (utils.clj:12)
+    clojure.core$binding_conveyor_fn$fn__5476.invoke (core.clj:2025)
+    clojure.lang.AFn.applyToHelper (AFn.java:154)
+    clojure.lang.RestFn.applyTo (RestFn.java:132)
+    clojure.lang.Agent$Action.doRun (Agent.java:114)
+    clojure.lang.Agent$Action.run (Agent.java:163)
+    java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1149)
+    java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:624)
+    java.lang.Thread.run (Thread.java:748)
+
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[31mFailed to compile build :app from ["src/cljs" "src/cljc" "env/dev/cljs"] in 0.455 seconds.[0m
+[36m----  Could not Analyze  src/cljs/content_hub/core.cljs  ----[0m
+
+  [1mNo such namespace: content-hub.reddit, could not locate content_hub/reddit.cljs, content_hub/reddit.cljc, or JavaScript source providing "content-hub.reddit" (Please check that namespaces with dashes use underscores in the ClojureScript file name) [0m
+
+[36m----  Analysis Error : Please see src/cljs/content_hub/core.cljs  ----[0m
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.488 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/content_hub/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[36m----  Compiler Warning on   src/cljs/content_hub/core.cljs   line:21  column:10  ----[0m
+
+  [1mUse of undeclared Var content-hub.core/test-request[0m
+
+  [36m18[0m  [36m(defn about-page [][0m
+  [36m19[0m  [36m  [:div [:h2 "About content-hub"][0m
+  [36m20[0m  [36m   [:div [:a {:href "/"} "go to the home page"]][0m
+  [33m21[0m  [1m   [:div test-request]])[0m
+  [0m  [0m  [33m         ^--- Use of undeclared Var content-hub.core/test-request[0m
+  [36m22[0m  [36m[0m
+  [36m23[0m  [36m(defn test-request [][0m
+  [36m24[0m  [36m  (http/get "https://jsonplaceholder.typicode.com/todos/1"))[0m
+  [36m25[0m  [36m[0m
+  [36m26[0m  [36m;; -------------------------[0m
+
+[36m----  Compiler Warning : Please see src/cljs/content_hub/core.cljs  ----[0m
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 1.53 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/goog/deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/cljs_deps.js
+notifying browser that file changed:  target/cljsbuild/public/js/out/content_hub/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.593 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/content_hub/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[36m----  Compiler Warning on   src/cljs/content_hub/core.cljs   line:21  column:10  ----[0m
+
+  [1mUse of undeclared Var content-hub.core/test-request[0m
+
+  [36m18[0m  [36m(defn about-page [][0m
+  [36m19[0m  [36m  [:div [:h2 "About content-hub"][0m
+  [36m20[0m  [36m   [:div [:a {:href "/"} "go to the home page"]][0m
+  [33m21[0m  [1m   [:div test-request]])[0m
+  [0m  [0m  [33m         ^--- Use of undeclared Var content-hub.core/test-request[0m
+  [36m22[0m  [36m[0m
+  [36m23[0m  [36m(defn test-request [][0m
+  [36m24[0m  [36m  (http/get "https://jsonplaceholder.typicode.com/todos/1"))[0m
+  [36m25[0m  [36m[0m
+  [36m26[0m  [36m;; -------------------------[0m
+
+[36m----  Compiler Warning : Please see src/cljs/content_hub/core.cljs  ----[0m
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.68 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/content_hub/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.648 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/content_hub/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.59 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/content_hub/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[31mFailed to compile build :app from ["src/cljs" "src/cljc" "env/dev/cljs"] in 0.42 seconds.[0m
+[36m----  Could not Read  src/cljs/content_hub/core.cljs   line:68 ----[0m
+
+  [1m/Users/lesterr/Desktop/content-hub/src/cljs/content_hub/core.cljs [line 68, col 1] Unexpected EOF while reading item 12 of list, starting at line 15 and column 1.[0m
+
+[36m----  Reader Error : Please see src/cljs/content_hub/core.cljs  ----[0m
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[36m----  Compiler Warning on   src/cljs/content_hub/core.cljs   line:24  column:21  ----[0m
+
+  [1mUse of undeclared Var content-hub.core/test-request[0m
+
+  [36m20[0m  [36m      (prn (:status response))[0m
+  [36m21[0m  [36m      (prn (map :login (:body response))))))[0m
+  [36m22[0m  [36m[0m
+  [36m23[0m  [36m[0m
+  [33m24[0m  [1m(defonce test-data (test-request))[0m
+  [0m  [0m  [33m                    ^--- Use of undeclared Var content-hub.core/test-request[0m
+  [36m25[0m  [36m[0m
+  [36m26[0m  [36m(defn home-page [][0m
+  [36m27[0m  [36m  [:div [:h2 "Welcome to content-hub"][0m
+  [36m28[0m  [36m   [:div [:a {:href "/about"} "go to about page"]]])[0m
+
+[36m----  Compiler Warning : Please see src/cljs/content_hub/core.cljs  ----[0m
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.768 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/content_hub/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[36m----  Compiler Warning on   src/cljs/content_hub/core.cljs   line:24  column:21  ----[0m
+
+  [1mUse of undeclared Var content-hub.core/test-request[0m
+
+  [36m20[0m  [36m      (prn (:status response))[0m
+  [36m21[0m  [36m      (prn (:body response)))))[0m
+  [36m22[0m  [36m[0m
+  [36m23[0m  [36m[0m
+  [33m24[0m  [1m(defonce test-data (test-request))[0m
+  [0m  [0m  [33m                    ^--- Use of undeclared Var content-hub.core/test-request[0m
+  [36m25[0m  [36m[0m
+  [36m26[0m  [36m(defn home-page [][0m
+  [36m27[0m  [36m  [:div [:h2 "Welcome to content-hub"][0m
+  [36m28[0m  [36m   [:div [:a {:href "/about"} "go to about page"]]])[0m
+
+[36m----  Compiler Warning : Please see src/cljs/content_hub/core.cljs  ----[0m
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.714 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/content_hub/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[36m----  Compiler Warning on   src/cljs/content_hub/core.cljs   line:24  column:21  ----[0m
+
+  [1mUse of undeclared Var content-hub.core/test-request[0m
+
+  [36m20[0m  [36m      (prn (:status response))[0m
+  [36m21[0m  [36m      (prn (:body response)))))[0m
+  [36m22[0m  [36m[0m
+  [36m23[0m  [36m[0m
+  [33m24[0m  [1m(defonce test-data (test-request))[0m
+  [0m  [0m  [33m                    ^--- Use of undeclared Var content-hub.core/test-request[0m
+  [36m25[0m  [36m[0m
+  [36m26[0m  [36m(defn home-page [][0m
+  [36m27[0m  [36m  [:div [:h2 "Welcome to content-hub"][0m
+  [36m28[0m  [36m   [:div [:a {:href "/about"} "go to about page"]]])[0m
+
+[36m----  Compiler Warning : Please see src/cljs/content_hub/core.cljs  ----[0m
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.728 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/content_hub/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.708 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/content_hub/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.593 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/content_hub/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.677 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/content_hub/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.604 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/content_hub/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[36m----  Compiler Warning on   src/cljs/content_hub/core.cljs   line:13  column:16  ----[0m
+
+  [1mWrong number of args (0) passed to reagent.core/atom[0m
+
+  [36m11[0m  [36m;; -------------------------[0m
+  [36m12[0m  [36m;; Views[0m
+  [33m13[0m  [1m(def app-state (atom))[0m
+  [0m  [0m  [33m               ^--- Wrong number of args (0) passed to reagent.core/atom[0m
+  [36m14[0m  [36m[0m
+  [36m15[0m  [36m(defonce test-data[0m
+  [36m16[0m  [36m  (go (let[0m
+  [36m17[0m  [36m          [response (<! (http/get "https://jsonplaceholder.typicode.com/todos/1"[0m
+  [36m18[0m  [36m                                 {:with-credentials? false[0m
+
+[36m----  Compiler Warning : Please see src/cljs/content_hub/core.cljs  ----[0m
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.723 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/content_hub/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[36m----  Compiler Warning on   src/cljs/content_hub/core.cljs   line:13  column:16  ----[0m
+
+  [1mWrong number of args (0) passed to reagent.core/atom[0m
+
+  [36m11[0m  [36m;; -------------------------[0m
+  [36m12[0m  [36m;; Views[0m
+  [33m13[0m  [1m(def app-state (atom))[0m
+  [0m  [0m  [33m               ^--- Wrong number of args (0) passed to reagent.core/atom[0m
+  [36m14[0m  [36m[0m
+  [36m15[0m  [36m(defonce test-data[0m
+  [36m16[0m  [36m  (go (let[0m
+  [36m17[0m  [36m          [response (<! (http/get "https://jsonplaceholder.typicode.com/todos/1"[0m
+  [36m18[0m  [36m                                 {:with-credentials? false[0m
+
+[36m----  Compiler Warning : Please see src/cljs/content_hub/core.cljs  ----[0m
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.619 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/content_hub/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.598 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/content_hub/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.699 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/content_hub/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.672 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/content_hub/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.673 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/content_hub/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[31mFailed to compile build :app from ["src/cljs" "src/cljc" "env/dev/cljs"] in 0.374 seconds.[0m
+[36m----  Could not Analyze  src/cljs/content_hub/core.cljs   line:18  column:1  ----[0m
+
+  [1mWrong number of args (1) passed to: core/defonce[0m
+
+  [36m17[0m  [36m;; example get request[0m
+  [33m18[0m  [1m(defonce [0m
+  [0m  [0m  [33m^--- Wrong number of args (1) passed to: core/defonce[0m
+  [36m19[0m  [36m  (go (let[0m
+  [36m20[0m  [36m          [response (<! (http/get "https://jsonplaceholder.typicode.com/todos/1"[0m
+  [36m21[0m  [36m                                 {:with-credentials? false[0m
+
+[36m----  Analysis Error : Please see src/cljs/content_hub/core.cljs  ----[0m
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[31mFailed to compile build :app from ["src/cljs" "src/cljc" "env/dev/cljs"] in 0.384 seconds.[0m
+[36m----  Could not Analyze  src/cljs/content_hub/core.cljs   line:18  column:1  ----[0m
+
+  [1mWrong number of args (1) passed to: core/defonce[0m
+
+  [36m17[0m  [36m;; example get request[0m
+  [33m18[0m  [1m(defonce [0m
+  [0m  [0m  [33m^--- Wrong number of args (1) passed to: core/defonce[0m
+  [36m19[0m  [36m  (go (let[0m
+  [36m20[0m  [36m          [response (<! (http/get "https://jsonplaceholder.typicode.com/todos/1"[0m
+  [36m21[0m  [36m                                 {:with-credentials? false[0m
+
+[36m----  Analysis Error : Please see src/cljs/content_hub/core.cljs  ----[0m
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.681 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/content_hub/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.702 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/content_hub/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.589 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/content_hub/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.718 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/content_hub/core.js
+Compiling build :app to "target/cljsbuild/public/js/app.js" from ["src/cljs" "src/cljc" "env/dev/cljs"]...
+[32mSuccessfully compiled build :app to "target/cljsbuild/public/js/app.js" in 0.596 seconds.[0m
+notifying browser that file changed:  target/cljsbuild/public/js/out/content_hub/core.js

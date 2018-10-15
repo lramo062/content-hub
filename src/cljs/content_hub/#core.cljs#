@@ -26,7 +26,6 @@
   [:div [:h2 "Welcome to content-hub"]
    [:div [:a {:href "/about"} "go to about page"]]])
 
-
 ;; displaying the get request data as a string
 (defn about-page []
   [:div [:h2 "About content-hub"]
