@@ -15,17 +15,16 @@
 (def app-state (atom {}))
 
 ;; example get request
-(defonce get-json
-  (go (let
-          [response (<! (http/get "https://jsonplaceholder.typicode.com/todos/1"
-                                 {:with-credentials? false
-                                  :query-params {"since" 135}}))]
-      (reset! app-state (:body response)))))
+;; (defonce get-youtube-json
+;;   (go (let
+;;           [response (<! (http/get "http://localhost:3449/props"
+;;                                  {:with-credentials? false
+;;                                   :query-params {"since" 135}}))]
+;;       (reset! app-state (:body response)))))
 
 (defn home-page []
   [:div [:h2 "Welcome to content-hub"]
    [:div [:a {:href "/about"} "go to about page"]]])
-
 
 ;; displaying the get request data as a string
 (defn about-page []
@@ -33,6 +32,10 @@
    [:div [:a {:href "/"} "go to the home page"]]
    [:div (str @app-state)]])
 
+(defn forbidden-page []
+  [:div
+   [:h2 "403"]
+   [:h3 "The content you are trying to reach is forbidden"]])
 
 ;; -------------------------
 ;; Routes
@@ -47,6 +50,11 @@
 
 (secretary/defroute "/about" []
   (reset! page #'about-page))
+
+(secretary/defroute "/props" []
+  (reset! page #'forbidden-page))
+
+
 
 ;; -------------------------
 ;; Initialize app

@@ -18,7 +18,8 @@
                  [secretary "1.2.3"]
                  [venantius/accountant "0.2.4"
                   :exclusions [org.clojure/tools.reader]]
-                 [cljs-http "0.1.45"]]
+                 [cljs-http "0.1.45"]
+                 [clj-json "0.5.3"]]
 
   :plugins [[lein-environ "1.1.0"]
             [lein-cljsbuild "1.1.7"]

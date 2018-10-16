@@ -3,7 +3,28 @@
             [compojure.route :refer [not-found resources]]
             [hiccup.page :refer [include-js include-css html5]]
             [content-hub.middleware :refer [wrap-middleware]]
-            [config.core :refer [env]]))
+            [config.core :refer [env]]
+            [clojure.java.io :as io]
+            [clj-json.core :as json]))
+
+(defn json-response [data & [status]]
+  "Returns a json reponse of the data passed into the function"
+  {:status (or status 200)
+   :headers {"Content-Type" "application/json"}
+   :body (json/generate-string data)})
+
+(defn validate-request [request]
+  "View the information contained in the request, useful for debugging"
+  (if (= (get request :remote-addr) "0:0:0:0:0:0:0:1")
+      (json-response (load-props "system.properties"))
+      (loading-page)))
+
+(defn load-props [filename]
+  "Loads the property variables saved in system.properties"
+    (let [io (java.io.FileInputStream. filename)
+        prop (java.util.Properties.)]
+    (.load prop io)
+    (into {} prop)))
 
 (def mount-target
   [:div#app
@@ -26,11 +47,10 @@
      mount-target
      (include-js "/js/app.js")]))
 
-
 (defroutes routes
   (GET "/" [] (loading-page))
   (GET "/about" [] (loading-page))
-  
+  (GET "/props" request (validate-request request))
   (resources "/")
   (not-found "Not Found"))
 
