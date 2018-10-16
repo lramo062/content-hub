@@ -1,3 +1,9 @@
 # system properties #
 #####################
 *.properties
+
+# lein generated files #
+########################
+.lein-env
+.rebel_readline_history
+figwheel_server.log
